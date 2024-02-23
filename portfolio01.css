@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+table { border-collapse: collapse; width: 100%; }
+ol, ul { list-style: none; }
+a { text-decoration: none; color: #111; }
+address { font-style: normal; }
+
+body {
+  line-height: 1.5;
+  color: black;
+}
+
+.wrap {
+  width: 1200px;
+  margin: 100px auto;
+}
+
+.side {
+  width: 400px;
+}
+
+.side .box1::after {
+  content: "";
+  display: block; 
+  clear: both;
+}
+
+.side .box1 {
+  width: 400px;
+  height: 140px;
+  background: url(image/logo.png) no-repeat 20px center #3D3D3D;
+  background-size: 100px;
+  border-radius: 15px;
+  color: white;
+  margin-bottom: 10px; 
+}
+.side .box1_txt {
+  float: right;
+  padding: 30px 30px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.side .box2::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.side .box2 {
+  width: 400px;
+  height: 80px;
+  background-color: #009640;
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.side .box2 h1 {
+  float: right;
+  width: 250px;
+  height: 60px;
+  background-color: white;
+  color: black;
+  border-radius: 0 15px 15px 0;
+  text-align: center;
+  line-height: 60px;
+  margin: 10px;
+}
+
+.side .box2 p {
+  float: left;
+  padding: 17px 0  0 30px;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.side .box3::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.side .box3 {
+  height: 320px;
+  float: left;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color: #111;
+  font-size: 30px;
+  letter-spacing: 20px;
+  padding: 35px 0;
+  color: #fff;
+  border-radius: 15px
+}
+
+.side .box4::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.side .box4 {
+  width: 300px;
+  height: 320px;
+  float: right;
+  border-radius: 15px;
+  background-color:#DADADA;
+  line-height: 20px;
+}
+.side .box4 dt {
+  font-size: 25px;
+  font-weight: 900;
+  margin-top: 20px;
+}
+
+.side .box4 dt,
+.side .box4 dd {
+  margin-left: 120px;
+}
+
+.box4 img {
+  float: left;
+  margin-left: 20px;
+}
+
+.box4 .health { 
+  padding: 20px;
+}
+.box4 .game {
+  padding: 20px;
+}
+.box4 .book {
+  padding: 20px;
+}
+
+
+.right .line_map::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.right {
+  position: relative;
+  bottom: 480px;
+  float: right;
+}
+
+.right .linetitle {
+  width: 160px;
+  height: 70px;
+  position: absolute;
+  right: 165px;
+  bottom: 420px;
+  line-height: 20px;
+  text-align: center;
+  background-color: #009640;
+  border-radius: 15px;
+  color: white;
+  padding: 15px;
+}
+
+.right span {
+  font-size: 18px;
+}
+
+.right::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 480px;
+  background-color: #009640;
+  border-radius: 8px;
+  position: absolute;
+  right: 240px;
+}
+
+.right .line_map ul{
+  width: 300px;
+  height: 135px;
+  transform: rotate(-30deg);
+  line-height: 20px;
+  font-weight: 900;
+}
+
+input {
+  display: none;
+}
+
+.right .line_map ul img {
+  float: left;
+}
+
+.right .line_map ul h2 {
+  padding-top: 50px;
+}
+
+.con {
+  width: 410px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: -450px;
+  opacity: 0;
+  transition: all .7s;
+  font-size: 30px;
+  font-weight: 900;
+}
+.con1 {
+  background: url(image/th\ \(1\).jpg) no-repeat center;
+  background-size: 40%;
+}
+.con2 {
+  background: url(image/th.jpg)no-repeat center;
+  background-size: 80%;
+}
+.con3 {
+  background: url(image/yangsan_logo.png) no-repeat center;
+  background-size: 90%;
+}
+input[id=option1]:checked ~ .con1 {
+  opacity: 1;
+}
+input[id=option2]:checked ~ .con2 {
+  opacity: 1;
+}
+input[id=option3]:checked ~ .con3 {
+  opacity: 1;
+}
